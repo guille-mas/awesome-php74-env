@@ -9,6 +9,13 @@ ARG APP_ROOT_DIR
 
 # environment variables available at build time and run time
 ENV COMPOSER_HOME="/usr/local/composer/global"
+ENV HOME=${APP_ROOT_DIR}
+ENV HTTP_PORT=${HTTP_PORT}
+ENV HTTPS_PORT=${HTTPS_PORT}
+ENV PROJECT_NAME=${PROJECT_NAME}
+ENV APP_ROOT_DIR=${APP_ROOT_DIR}
+ENV APP_PUBLIC_DIR=${APP_PUBLIC_DIR}
+
 
 RUN apt-get update \
     # Install debian packages
